@@ -6,7 +6,7 @@ import { watcherSaga } from './saga/dogSaga';
 import { dogReducer } from './reducer/dogReducer';
 
 const sagaMiddleware = createSagaMiddleware();
-// dev tools middleware
+// dev tools middleware 
 const reduxDevTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
@@ -22,3 +22,5 @@ const  store = createStore(RootReducer, compose(applyMiddleware(sagaMiddleware),
 sagaMiddleware.run(watcherSaga);
 
 export default store;
+
+// rough commit checking for tag-cut
